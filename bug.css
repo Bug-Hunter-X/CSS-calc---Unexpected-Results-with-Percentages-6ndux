@@ -1,0 +1,1 @@
+The CSS property `calc()` might produce unexpected results if you use it with percentage values that depend on the size of the parent element and the parent element's size hasn't been calculated yet. This often occurs when the parent element doesn't have a defined height or width, or if the percentage value is based on a property that's also calculated or inherited.
