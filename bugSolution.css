@@ -1,0 +1,25 @@
+To resolve this, ensure that the parent element has explicitly defined dimensions (height and/or width) or use a different approach that doesn't rely on the parent element's size being calculated before the child element's `calc()` calculation.  Sometimes, restructuring the HTML or adjusting the CSS order can resolve this issue.
+
+Example:
+Instead of:
+```css
+#parent {
+  width: 50%;
+}
+
+#child {
+  width: calc(50% - 10px);
+}
+```
+Consider:
+```css
+#parent {
+  width: 50%;
+  height: 200px; /* Add explicit height */
+}
+
+#child {
+  width: calc(50% - 10px);
+}
+```
+Or, if possible, avoid percentage calculations that depend on the parent's size entirely.
